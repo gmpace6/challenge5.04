@@ -10,15 +10,15 @@ let sample4 = "Balanced."
 // 
 function isItBalanced(string) {
   let open = 0;
-  let closed = 0;
+  let close = 0;
   for (let i = 0; i < string.length; i++) {
     if ((string[i] === `(`)) {
       (open += 1);
     } else if ((string[i] === `)`)) {
-      (closed += 1);
+      (close += 1);
     }
   }
-  return open === closed
+  return open === close
 }
 console.log(isItBalanced(sample1))
 console.log(isItBalanced(sample2))
